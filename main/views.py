@@ -9,6 +9,10 @@ from django.contrib.auth.decorators import login_required
 import stripe
 # Create your views here.
 
+
+GITHUB_OAUTH_ID = "d8902f060640597f3db6"
+GITHUB_OAUTH_SECRET = "102696c7100080dcee1580440a299b6774700fa1"
+stripe.api_key = "sk_test_51NosN8SBDKvZ85pbLZqGyRwRWjRRsCf8DHm48yT7U2pIgytfFyUsif5PyS67YAFkN7hYgzof3xniCxLtS3tb7FOt00By3KG1Lx"
 def index(request):
     return render(request, "main/index.html")
 
@@ -51,3 +55,24 @@ def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse("index"))
 
+
+
+@login_required(redirect_field_name='login')
+def purchase(request):
+    if Profile.objects.get(user_id=request.user.id).paid == "True":
+        return HttpResponse("Well, I guess you don't have to pay twice.")
+    return render(request, "main/purchase.html")
+
+def create_payment(request):
+    try:
+        intent = stripe.PaymentIntent.create(
+            amount=9900,
+            currency='usd'
+        )
+
+        return JsonResponse({
+          'clientSecret': intent['client_secret']
+        })
+
+    except Exception as e:
+        return JsonResponse(error=str(e)), 403
