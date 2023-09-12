@@ -10,7 +10,9 @@ import stripe
 # Create your views here.
 
 
-
+GITHUB_OAUTH_ID = "d8902f060640597f3db6"
+GITHUB_OAUTH_SECRET = "102696c7100080dcee1580440a299b6774700fa1"
+stripe.api_key = "sk_test_51NosN8SBDKvZ85pbLZqGyRwRWjRRsCf8DHm48yT7U2pIgytfFyUsif5PyS67YAFkN7hYgzof3xniCxLtS3tb7FOt00By3KG1Lx"
 def index(request):
     return render(request, "main/index.html")
 

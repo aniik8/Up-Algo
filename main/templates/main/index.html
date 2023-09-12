@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>AlgoExpert Clone</title>
+        <title>LeetCode Clone</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/free-leetcode-3628885-3030025.png" type="image/x-icon"/>
         <script>
             function displayInfo(section) {
                 fetch(`/info/${section}`)
@@ -34,23 +35,23 @@
             }
         </script>
     </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">AlgoExpert Clone</a>
+    <body  style = "background-color:#24221e" height = "100%">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a style="color: gray" class="navbar-brand" href="#">UpAlgo - Your Sasta LeetCode </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div  class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" onclick="return displayInfo('home');" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a style="color: gray" class="nav-link" onclick="return displayInfo('home');" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" onclick="return problem('problem');" href="#">Problems</a>
+                    <li  class="nav-item active">
+                        <a style="color: gray" class="nav-link" onclick="return problem('problem');" href="#">Problems</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/purchase/" href="#">Purchase</a>
+                    <li  class="nav-item active">
+                        <a style="color:#ffa116" class="nav-link" href="/purchase/" href="#">Purchase</a>
                     </li>
                 </ul>
                 <!--<a class="nav-link" onclick="displayInfo('problem');" href="">Problems</a>-->
@@ -58,31 +59,32 @@
             {% if not request.user.username %}
                 <a class="nav-link" href="/login">Register/Login</a>
             {% else %}
-                <a class="nav-link" href="/logout">Logout</a>
-                <img src="{{ request.session.avator }}" width="50px" height="50px">
+                <a style="color:#ffa116" class="nav-link" href="/logout">Logout</a>
+                <img src="api.multiavatar.com/kathrin.svg
+                " width="50px" height="50px">
+                
                 <p style="margin-left: 5px">Welcome, {{ request.user.username }}</p>
             {% endif %}
             {% if request.session.paid == "true" or request.session.paid == "True" and request.user.username %}
-                <p style="margin-left: 5px;">You own AlgoExpert Clone</p>
+            <p style="margin-left: 5px;">You own Premium</p>
             {% elif request.session.paid == "false" or request.session.paid == "False" and request.user.username %}
-                <p style="margin-left: 5px;">You don't own AlgoExpert Clone</p>
+                <p style="margin-left: 5px;">You don't own LeetCode Premium. Purchase to have a premium</p>
             {% endif %}
         </nav>
+        <div>
         <div id="main">
-            <h1 style="text-align: center;">This is an AlgoExpert Clone!</h1>
-            <p style="text-align: center;">Original Site: <a href="https://algoexpert.io">https://algoexpert.io</a></p>
+            <h1  style="text-align: center; color: gray">This is a LeetCode Clone!</h1>
             <br>
-            <h2 style="margin-left: 20px;">Features that this clone support: </h2>
-            <ul style="margin-left: 40px;">
-                <li><s>100</s> 2 of the <s>best</s> coding interview questions.</li>
+            <h2 style="margin-left: 20px; color: gray">Features that this clone support: </h2>
+            <ul style="margin-left: 40px; color: #d6d1c7">
+                <li><s>100</s> 10 of the <s>best</s> coding interview questions.</li>
                 <li><s>Comprehensive video explanations.</s> (Well, use YouTube!), But for some question, I will add some video that is considerably good on explaining, but no promise!</li>
                 <li><s>A crash course on data structures.</s>. Well, guess what, we don't have a crash course on data structure.</li>
                 <li>Written code solutions in <s>9</s> 1 (You all better become data scientist so you can learn Python so you can use this platform) language<s>s</s>.</li>
                 <li>A <s>full-fledged</s> minimalistic coding workspace.</li>
                 <li><s>In-depth space-time complexity analyses.</s> Well, try to do analysis on your own because nobody going to help you during coding interview!</li>
-                <li><s>Certificate upon completion of all questions.</s> Nope.</li>
             </ul>
-            <h2 style="margin-left: 20px;">Want to Learn how to create This AlgoExpert Clone?</h2>
         </div>
+    </div>
     </body>
 </html>
