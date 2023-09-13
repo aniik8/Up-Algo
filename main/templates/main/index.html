@@ -45,7 +45,7 @@
             <div  class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a style="color: gray" class="nav-link" onclick="return displayInfo('home');" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a style="color: gray" class="nav-link" onclick="return displayInfo('home');" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li  class="nav-item active">
                         <a style="color: gray" class="nav-link" onclick="return problem('problem');" href="#">Problems</a>
@@ -63,12 +63,12 @@
                 <img src="api.multiavatar.com/kathrin.svg
                 " width="50px" height="50px">
                 
-                <p style="margin-left: 5px">Welcome, {{ request.user.username }}</p>
+                <p style="margin-left: 5px;color:#ffa116">Welcome, {{ request.user.username }}</p>
             {% endif %}
             {% if request.session.paid == "true" or request.session.paid == "True" and request.user.username %}
-            <p style="margin-left: 5px;">You own Premium</p>
+            <p style="color:#ffa116">You own Premium</p>
             {% elif request.session.paid == "false" or request.session.paid == "False" and request.user.username %}
-                <p style="margin-left: 5px;">You don't own LeetCode Premium. Purchase to have a premium</p>
+                <p style="margin-left: 5px; backdrop-filter: blur(5px);">Purchase to have a premium</p>
             {% endif %}
         </nav>
         <div>
