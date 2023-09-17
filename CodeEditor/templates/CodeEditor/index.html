@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Editor</title>
 </head>
-<body>
+<body style = "background-color:#24221e;color : #e8e6df;" height = "100%" >
     <div class="row">
         <div class="col-5" style="height: 100vh; border: 1px solid black; margin-left: 85px; overflow-y: auto;">
           <h1>{{ title }}</h1>
             {{ description|safe }}
         </div>
-        <textarea id="codeEditor" class="col-5" style="height: 100vh; border: 1px solid black; margin-left: 25px; overflow-y: auto; resize: none;" name="code">{{ exist.code }}{{ starter }}</textarea>
+        <textarea id="codeEditor" class="col-5" style="height: 100vh; border: 1px solid black; margin-left: 25px; overflow-y: auto; resize: none; background-color:#24221e; color:#e8e6df" name="code">{{ exist.code }}{{ starter }}</textarea>
       </div>
       <br>
       <button type="button" class="btn btn-success" id="submit-button" style="margin-left: 800px">Submit Code</button>

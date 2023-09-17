@@ -1,9 +1,269 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>LeetCode Clone</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/free-leetcode-3628885-3030025.png" type="image/x-icon"/>
+
+        
+        <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #24221e;
+                    color: #ffffff;
+                    
+                }
+        
+                header {
+                    background-color: #333;
+                    color: #ffffff;
+                    padding: 20px;
+                    text-align: center;
+                }
+        
+            
+                nav ul {
+                    list-style: none;
+                    padding: 0;
+                }
+        
+                nav li {
+                    display: inline;
+                    margin-right: 20px;
+                }
+        
+                nav a {
+                    text-decoration: none;
+                    color: #ffffff;
+                }
+        
+                nav a:hover {
+                    color: #0074d9;
+                }
+        
+                .hero {
+                    text-align: center;
+                    padding: 100px 0;
+                }
+        
+                .hero h1 {
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                }
+        
+                .hero p {
+                    font-size: 18px;
+                }
+        
+                .compiler {
+                    background-color: #333;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 50px 0;
+                }
+        
+                .compiler h2 {
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                }
+        
+                .questions {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 40px 0;
+                    text-align: center;
+                }
+        
+                .question {
+                    background-color: #444;
+                    color: #ffffff;
+                    border-radius: 5px;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                }
+        
+                .question h3 {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+        
+                .question p {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+        
+                .question a {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #0074d9;
+                    color: #ffffff;
+                    text-decoration: none;
+                    border-radius: 5px;
+                }
+        
+                .premium {
+                    background-color: #ff9800;
+                }
+        
+                .login-signup {
+                    background-color: #444;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 50px 0;
+                }
+        
+                .login-signup h2 {
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                }
+        
+                footer {
+                    text-align: center;
+                    padding-top: 20px;
+                }
+            
+            .card-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around; /* Adjust as needed */
+              }
+              a:hover {
+                color: #0074d9; /* Change the link color on hover */
+            }
+              .card {
+                width: calc(33.33% - 35px); /* Adjust the width as needed */
+                background-color: #474343;;
+                border: 1px solid #474646;
+                border-radius: 5px;
+                margin: 10px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+              }
+              
+              .card:hover {
+                transform: scale(1.05);
+              }
+              
+              .card-content {
+                padding: 20px;
+              }
+              header {
+                background-color: #333;
+                color: #fff;
+                padding: 20px 0;
+            }
+            .logo {
+                font-size: 24px;
+            }
+            
+            ul {
+                list-style-type: none;
+            }
+            
+            ul li {
+                display: inline;
+                margin-right: 20px;
+            }
+            
+            a {
+                text-decoration: none;
+                color: #fff;
+                transition: color 0.3s;
+            }
+            
+            a:hover {
+                color: #0074d9;
+            }
+            
+            .hero {
+                background-image: url('https://media.istockphoto.com/id/1176737314/photo/dots-and-lines-connection-on-abstract-technology-background.webp?b=1&s=170667a&w=0&k=20&c=4DWWJovOyI7ZdJ31zvn3xkDJar1j7cqMQE0EDW9TJO0https://pbs.twimg.com/media/EzHKMvuXIAItNJf.png:large');
+                background-size: cover;
+                
+                color: #fff;
+                
+            }
+            
+            .cta-button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #0074d9;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+            
+            .features {
+                display: flex;
+                justify-content: space-around;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 40px 0;
+            }
+            
+            .feature {
+                margin: 0 20px;
+            }
+            
+            .feature h2 {
+                font-size: 24px;
+            }
+            
+            .footer {
+                background-color:;
+                color:#e8e6df;
+                padding: 20px 0;
+            }
+            /* Styling for feature section */
+            .features {
+                background-color: #24221e;
+                text-align: center;
+                text:color : "#000000"
+                padding: 50px 0;
+            }
+            
+            .features h3{
+                text:color : "#b3aead"
+            }
+            
+            /* Styling for feature list */
+            .feature-list {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+            
+            /* Styling for individual feature items */
+            .feature-item {
+                max-width: 300px;
+                margin: 0 20px;
+                text-align: left;
+            }
+            
+            .feature-icon {
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+            
+            .feature-item h3 {
+                font-size: 24px;
+                margin: 10px 0;
+            }
+            
+            .feature-item p {
+                font-size: 16px;
+                color: #b3aead;
+            }
+            
+            /* Optional hover effect for feature items */
+            .feature-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0px 4px 8px rgba(133, 128, 127);
+            }
+                       
+        </style>
         <script>
             function displayInfo(section) {
                 fetch(`/info/${section}`)
@@ -33,10 +293,12 @@
                     }
                 })
             }
+            
         </script>
     </head>
     <body  style = "background-color:#24221e" height = "100%">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img rel="icon" style="width:3%; margin: 0 2% 0% 1%" src="https://cdn.iconscout.com/icon/free/png-256/free-leetcode-3628885-3030025.png" type="image/x-icon"/>
             <a style="color: gray" class="navbar-brand" href="#">UpAlgo - Your Sasta LeetCode </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -54,10 +316,10 @@
                         <a style="color:#ffa116" class="nav-link" href="/purchase/" href="#">Purchase</a>
                     </li>
                 </ul>
-                <!--<a class="nav-link" onclick="displayInfo('problem');" href="">Problems</a>-->
+                <a class="nav-link" onclick="displayInfo('problem');" href="">Problems</a>
             </div>
             {% if not request.user.username %}
-                <a class="nav-link" href="/login">Register/Login</a>
+                <a class="nav-link " style="color:#ffa116" href="/login">Register/Login</a>
             {% else %}
                 <a style="color:#ffa116" class="nav-link" href="/logout">Logout</a>
                 <img src="api.multiavatar.com/kathrin.svg
@@ -72,19 +334,116 @@
             {% endif %}
         </nav>
         <div>
-        <div id="main">
+  
+  
+        
             <h1  style="text-align: center; color: gray">This is a LeetCode Clone!</h1>
             <br>
             <h2 style="margin-left: 20px; color: gray">Features that this clone support: </h2>
+           
             <ul style="margin-left: 40px; color: #d6d1c7">
-                <li><s>100</s> 10 of the <s>best</s> coding interview questions.</li>
+                {% comment %} <li><s>100</s> 10 of the <s>best</s> coding interview questions.</li>
+                <br/>
                 <li><s>Comprehensive video explanations.</s> (Well, use YouTube!), But for some question, I will add some video that is considerably good on explaining, but no promise!</li>
                 <li><s>A crash course on data structures.</s>. Well, guess what, we don't have a crash course on data structure.</li>
                 <li>Written code solutions in <s>9</s> 1 (You all better become data scientist so you can learn Python so you can use this platform) language<s>s</s>.</li>
                 <li>A <s>full-fledged</s> minimalistic coding workspace.</li>
-                <li><s>In-depth space-time complexity analyses.</s> Well, try to do analysis on your own because nobody going to help you during coding interview!</li>
+                <li><s>In-depth space-time complexity analyses.</s> Well, try to do analysis on your own because nobody going to help you during coding interview!</li> {% endcomment %}
             </ul>
         </div>
     </div>
+    </div>
+    <header id="main">
+        <h1>Welcome to CodingWebsite</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Coding Compiler</a></li>
+                <li><a href="#">Sign Up / Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to CodingWebsite</h1>
+        <p>Your source for coding tutorials and challenges.</p>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-content">
+                    
+                    <h5 style="color : #e8e6df;"><img src="https://assets.leetcode.com/study_plan_v2/top-interview-150/cover" style="width:15%" alt="Image 1">  Top interview 10 Questions.</h5>
+                    <p>This is the content of Card 1.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <h5 style="color : #e8e6df;" ><img src="https://assets.leetcode.com/study_plan_v2/30-days-of-javascript/cover" style="width:15%" alt="Image 1">  Core JS Article.</h5>
+                    <p>Read the advance Javascript Here.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <h5 style="color : #e8e6df;"><img src="https://assets.leetcode.com/study_plan_v2/leetcode-75/cover" style="width:15%" alt="Image 1"> Give Mock and excel </h5>
+                    <p>Give your Mock test and excel in the Inteview.</p>
+                </div>
+            </div>
+    </section>
+
+    <section class="compiler">
+        <h2>Coding Compiler</h2>
+        <p>Compile and run code, and check your solutions against test cases.</p>
+        <a href="#" class="cta-button">Try it now</a>
+    </section>
+
+    <section class="questions">
+        <h2>Practice Coding Questions</h2>
+        <div class="question-list">
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>Question 1 Title</h3>
+                <p>Question description goes here.</p>
+                <a href="#">Solve</a>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+            <!-- Premium Question -->
+            {% if request.session.paid == "false"%}
+            <div class="question premium">
+                <h3>Premium Question Title</h3>
+                <p>Premium question description goes here.</p>
+                <a href="#">Unlock with Premium</a>
+            </div>
+            {% endif%}
+        </div>
+    </section>
+    {% if not request.user.username %}
+    <section class="login-signup">
+        <h2>Sign Up or Log In</h2>
+        <p>Sign up or log in with your GitHub ID to access all features.</p>
+        <a href="#" class="cta-button">Sign Up / Log In</a>
+    </section>
+{% endif%}
+    <section class="features">
+        <div class="feature">
+            <h2>Learn to Code</h2>
+            <p>Explore our comprehensive tutorials on various programming languages and technologies.</p>
+        </div>
+        <div class="feature">
+            <h2>Read the Blog</h2>
+            <p>Stay updated with our blog, where we share coding tips, news, and insights.</p>
+        </div>
+        <div class="feature">
+            <h2>Get in Touch</h2>
+            <p>Have questions or need assistance? Contact us, and we'll be happy to help.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 CodingWebsite. All rights reserved.</p>
+    </footer>
     </body>
 </html>
