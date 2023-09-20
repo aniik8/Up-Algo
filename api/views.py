@@ -23,64 +23,65 @@ PROBLEMS = [
     {
         "id": 3,
         "title": "Reverse a number",
-        "description": "Return reverse of a number. <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
-        "starter": "def palindrome(n):\n\tpass",
+        "description": "Return reverse of a number. \
+            <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>reverse_number(\"1234\") = 4321</code></li><li><code>reverse_number(\"1010102\") = 2010101</code></li></ul>.",
+        "starter": "def reverse_number(n):\n\tpass",
         "paid": "false"
     },
     {
         "id": 4,
         "title": "Leap Year or Not",
-        "description": "Return reverse of a number. <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
-        "starter": "def palindrome(n):\n\tpass",
+        "description": "Check whether a given year is leap year or not. <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>Know what is leap year here?</a>  given with following constraints: <ul><li>0 <= n <= 2022</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>leap_year(\"2000\") = true</code></li><li><code>leap_year(\"1900\") = false</code></li><li><code>leap_year(2004) = true</code></li></ul>.",
+        "starter": "def leap_year(n):\n\tpass",
         "paid": "false"
     },
     {
         "id": 5,
         "title": "Find element in a sorted array",
-        "description": "Return reverse of a number. <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
-        "starter": "def palindrome(n):\n\tpass",
-        "paid": "false"
+        "description": "Given a sorted array. Find an element and return it's position. <a href='https://en.wikipedia.org/wiki/Sorted_array'>Know more here</a> Given with following constraints: <ul><li>10 <= array_length <= 1000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>findele(\"array = [1, 2, 3, 4]. ele = 3 \") = 2</code></li></ul>.",
+        "starter": "def findele(n, element):\n\tpass",
+        "paid": "true"
     },
     {
         "id": 6,
-        "title": "Second maximum element in an array",
-        "description": "Return reverse of a number. <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
-        "starter": "def palindrome(n):\n\tpass",
+        "title": "Find if a number is odd or even.",
+        "description": "Given a number, your task is to check if the given number is even or odd. <a href='https://en.wikipedia.org/wiki/Parity_(mathematics)'>See documentation here</a>Given with following constraints: <ul><li>1 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>parity(\"1234\") = true</code></li><li><code>parity(\"123\") = false</code></li></ul>.",
+        "starter": "def parity(n):\n\tpass",
         "paid": "false"
     },
     {
         "id": 7,
-        "title": "",
-        "description": "Return reverse of a number. <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
-        "starter": "def palindrome(n):\n\tpass",
+        "title": "Find sum of digit",
+        "description": "Given a natural number, Find the sum of the digits of the number. <a href='https://en.wikipedia.org/wiki/Digital_sum'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
+        "starter": "def sum_digit(n):\n\tpass",
         "paid": "false"
     },
     {
         "id": 8,
-        "title": "factorial of a number.",
-        "description": "Return reverse of a number. <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
-        "starter": "def palindrome(n):\n\tpass",
+        "title": "Factorial of a number.",
+        "description": "Given a number, find the factorial of that number.\n (Either use iterative or recursive solution, Complexity should be O(n)) <a href='https://en.wikipedia.org/wiki/Factorial'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 100</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>facto(\"5\") = 120</code></li><li><code>Reverse(\"4\") = 24</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
+        "starter": "def facto(n):\n\tpass",
         "paid": "false"
     },
     {
-        "id": 3,
+        "id": 8,
         "title": "Armstrong number",
-        "description": "Return reverse of a number. <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
-        "starter": "def palindrome(n):\n\tpass",
+        "description": "Return reverse of a number. <a href='https://en.wikipedia.org/wiki/Narcissistic_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
+        "starter": "def armstrong(n):\n\tpass",
         "paid": "false"
     },
     {
         "id": 9,
-        "title": "sum of Natural Numbers",
-        "description": "Return reverse of a number. <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
-        "starter": "def palindrome(n):\n\tpass",
+        "title": "Sum of Natural Numbers",
+        "description": "Return reverse of a number. <a href='https://en.wikipedia.org/wiki/Natural_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
+        "starter": "def sum(n):\n\tpass",
         "paid": "false"
     },
     {
         "id": 10,
         "title": "Binary to Decimal to conversion",
-        "description": "Return reverse of a number. <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
-        "starter": "def palindrome(n):\n\tpass",
+        "description": "Return reverse of a number. <a href='https://en.wikipedia.org/wiki/Binary_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
+        "starter": "def converter(n):\n\tpass",
         "paid": "false"
     }
 ]

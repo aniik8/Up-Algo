@@ -201,13 +201,20 @@
                 margin: 0 auto;
                 padding: 40px 0;
             }
-            
-            .feature {
+            .feature{
                 margin: 0 20px;
+                border-radius: 25px;
+  border: 2px solid #73AD21;
+            }
+            .feature:hover {
+               
+                transform: translateY(-5px);
+                box-shadow: 0px 4px 8px rgb(255, 152, 0);
             }
             
             .feature h2 {
-                font-size: 24px;
+                margin : 5px;
+                font-size: 18px;
             }
             
             .footer {
@@ -259,8 +266,7 @@
             
             /* Optional hover effect for feature items */
             .feature-item:hover {
-                transform: translateY(-5px);
-                box-shadow: 0px 4px 8px rgba(133, 128, 127);
+                
             }
                        
         </style>
@@ -316,31 +322,23 @@
                         <a style="color:#ffa116" class="nav-link" href="/purchase/" href="#">Purchase</a>
                     </li>
                 </ul>
-                <a class="nav-link" onclick="displayInfo('problem');" href="">Problems</a>
-            </div>
-            {% if not request.user.username %}
-                <a class="nav-link " style="color:#ffa116" href="/login">Register/Login</a>
-            {% else %}
-                <a style="color:#ffa116" class="nav-link" href="/logout">Logout</a>
-                <img src="api.multiavatar.com/kathrin.svg
-                " width="50px" height="50px">
-                
-                <p style="margin-left: 5px;color:#ffa116">Welcome, {{ request.user.username }}</p>
-            {% endif %}
-            {% if request.session.paid == "true" or request.session.paid == "True" and request.user.username %}
+                {% if request.session.paid == "true" or request.session.paid == "True" and request.user.username %}
             <p style="color:#ffa116">You own Premium</p>
+            <button type="button" class="btn btn-outline-warning" style="color : #ffa116">Premium User</button>
             {% elif request.session.paid == "false" or request.session.paid == "False" and request.user.username %}
-                <p style="margin-left: 5px; backdrop-filter: blur(5px);">Purchase to have a premium</p>
+                <button type="button" class="btn btn-outline-warning shadow-sm bg-orange rounded">Buy Premium</button>
+
             {% endif %}
+            </div>
+            
+            
         </nav>
         <div>
   
   
         
             <h1  style="text-align: center; color: gray">This is a LeetCode Clone!</h1>
-            <br>
-            <h2 style="margin-left: 20px; color: gray">Features that this clone support: </h2>
-           
+            <br>           
             <ul style="margin-left: 40px; color: #d6d1c7">
                 {% comment %} <li><s>100</s> 10 of the <s>best</s> coding interview questions.</li>
                 <br/>
@@ -354,19 +352,25 @@
     </div>
     </div>
     <header id="main">
-        <h1>Welcome to CodingWebsite</h1>
+        <h1>Welcome to UpAlgo</h1>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Tutorials</a></li>
                 <li><a href="#">Coding Compiler</a></li>
-                <li><a href="#">Sign Up / Log In</a></li>
+                {% if not request.user.username %}
+                <li> <a  style="color:#ffa116" href="/login">Register/Login</a>
+                </li>
+                {% else %}
+                <li><a style="color:#ffa116" href="/logout">Logout</a></li>
+              
+                {% endif %}
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Welcome to CodingWebsite</h1>
+        <h1>Features of UpAlgo</h1>
         <p>Your source for coding tutorials and challenges.</p>
         <div class="card-container">
             <div class="card">
