@@ -13,6 +13,12 @@
           <h1>{{ title }}</h1>
             {{ description|safe }}
         </div>
+         
+        {% comment %} textarea {
+            overflow-y: scroll;
+            height: 100px;
+            resize: none; /* Remove this if you want the user to resize the textarea */
+        } {% endcomment %}
         <textarea id="codeEditor" class="col-5" style="height: 100vh; border: 1px solid black; margin-left: 25px; overflow-y: auto; resize: none; background-color:#24221e; color:#e8e6df" name="code">{{ exist.code }}{{ starter }}</textarea>
       </div>
       <br>

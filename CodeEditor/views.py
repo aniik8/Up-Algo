@@ -15,7 +15,7 @@ from django.views.decorators.csrf import csrf_protect
 import random
 import string
 
-#BASE_URL = "https://algoexpertclone.herokuapp.com"
+
 
 tokens = []
 
@@ -74,6 +74,22 @@ def run_code(request):
     if problem == 1:
         out = Popen(["python3", "-m", "unittest", "-q", "test.NthFib"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     elif problem == 2:
+        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+    elif problem == 3:
+        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+    elif problem == 4:
+        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+    elif problem == 5:
+        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+    elif problem == 6:
+        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+    elif problem == 7:
+        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+    elif problem == 8:
+        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+    elif problem == 9:
+        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+    elif problem == 10:
         out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     stdout, stderr = out.communicate()
     data = str(stdout).split("======================================================================")

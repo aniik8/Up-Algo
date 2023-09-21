@@ -64,23 +64,24 @@ PROBLEMS = [
         "paid": "false"
     },
     {
-        "id": 8,
+        "id": 9,
         "title": "Armstrong number",
-        "description": "Return reverse of a number. <a href='https://en.wikipedia.org/wiki/Narcissistic_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
+        "description": "Check if the given number is an Armstrong Number or not. <a href='https://en.wikipedia.org/wiki/Narcissistic_number'> <br/>Check Documentation here</a> Given with following constraints: <br/> <ul><li>10 <= num <= 10000</li></ul> <br><br> \
+            <h4>Examples: </h4><ul><li><code>armstrong(\"153\") = true</code></li><li><code>armstrong(\"370\") = true</code></li><li><code>armstrong(23) = False</code></li></ul>.",
         "starter": "def armstrong(n):\n\tpass",
         "paid": "false"
     },
     {
-        "id": 9,
+        "id": 10,
         "title": "Sum of Natural Numbers",
-        "description": "Return reverse of a number. <a href='https://en.wikipedia.org/wiki/Natural_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
+        "description": "Given a number 'n', return the sum of natural number till number n.<br/> <a href='https://en.wikipedia.org/wiki/Natural_number'>Natural Number</a> <br/> Given with following constraints: <ul><li>10 <= num <= 1000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>sum(\"10\") = 55</code></li><li><code>sum(\"100\") = 5050</code></li><li><code>sum(\"83\") = 3486</code></li></ul>.",
         "starter": "def sum(n):\n\tpass",
         "paid": "false"
     },
     {
-        "id": 10,
+        "id": 11,
         "title": "Binary to Decimal to conversion",
-        "description": "Return reverse of a number. <a href='https://en.wikipedia.org/wiki/Binary_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>palindrome(\"1234\") = 4321</code></li><li><code>Reverse(\"1010102\") = 2010101</code></li><li><code>palindrome(\"This is not palindrome string\") = False</code></li></ul>.",
+        "description": "Given a Binary number, return the respective Decimal number of that binary number. <a href='https://en.wikipedia.org/wiki/Binary_number'>Know Binary Number</a> Given with following constraints: <ul><li>0000 <= num <= 11111111</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>converter(\"1010\") = 10</code></li><li><code>converter(\"0110\") = 6</code></li><li><code>converter(\"1111\") = 28</code></li></ul>.",
         "starter": "def converter(n):\n\tpass",
         "paid": "false"
     }

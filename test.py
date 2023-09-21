@@ -29,6 +29,39 @@ def random_str(n):
 		ans += random.choice(string.ascii_letters)
 	return ans
 
+
+#correct Function for Reverse of a number
+def reverse_number(n):
+	reversed_num = 0
+	while n != 0:
+		digit = n % 10
+		reversed_num = reversed_num * 10 + digit
+		n //= 10
+	return reversed_num
+
+# Check whether an year is a leap year of not.
+def leap_years(n):
+	year = 2000
+	if( ((year % 4 == 0) and (year % 100 != 0)) or (year % 400==0) ):
+		return True;
+	else:
+		return False;
+
+# find an element in a sorted array
+
+def findelement(arr, n):
+	l = 0
+	r = len(arr)
+	while l <= r:
+		mid = l + (r - l) // 2
+		if(arr[mid] == n):
+			return mid
+		elif arr[mid] < x:
+			l = mid + 1
+		else:
+			r = mid - 1
+	return -1
+
 class NthFib(unittest.TestCase):
 	def test_1(self):
 		"""Test for fib when n = 2"""
@@ -57,7 +90,7 @@ class NthFib(unittest.TestCase):
 		"""random test 5, expected {num}, actual {nth_fib(num)}"""
 		assert correct_fib(num) == nth_fib(num)
 
-# Testcase and question description are from: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/palindrome-checker
+
 class PalindromeChecker(unittest.TestCase):
 	def test_2(self):
 		"""palindrome("eye") should return true."""
