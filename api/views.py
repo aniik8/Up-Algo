@@ -24,8 +24,8 @@ PROBLEMS = [
         "id": 3,
         "title": "Reverse a number",
         "description": "Return reverse of a number. \
-            <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>reverse_number(\"1234\") = 4321</code></li><li><code>reverse_number(\"1010102\") = 2010101</code></li></ul>.",
-        "starter": "def reverse_number(n):\n\tpass",
+            <a href='https://simple.wikipedia.org/wiki/Reverse_of_a_number'>See documentation here</a> (same as you read it backward as forward), given with following constraints: <ul><li>10 <= num <= 10000</li></ul> <br><br> <h4>Examples: </h4><ul><li><code>reverse(\"1234\") = 4321</code></li><li><code>reverse(\"1010102\") = 2010101</code></li></ul>.",
+        "starter": "def reverse(n):\n\tpass",
         "paid": "false"
     },
     {
