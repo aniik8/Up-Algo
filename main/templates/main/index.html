@@ -1,4 +1,5 @@
 {% load static %}
+{% extends 'codeEditor/index.html'%}
 <!DOCTYPE html>
 <html>
     <head>
@@ -303,6 +304,7 @@
         </script>
     </head>
     <body  style = "background-color:#24221e" height = "100%">
+        {%block content %}
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <img rel="icon" style="width:3%; margin: 0 2% 0% 1%" src="https://cdn.iconscout.com/icon/free/png-256/free-leetcode-3628885-3030025.png" type="image/x-icon"/>
             <a style="color: gray" class="navbar-brand" href="#">UpAlgo - Your Sasta LeetCode </a>
@@ -330,11 +332,10 @@
 
             {% endif %}
             </div>
-            
-            
+       
         </nav>
         <div>
-  
+        {% endblock %}
   
         
             <h1  style="text-align: center; color: gray">This is a LeetCode Clone!</h1>

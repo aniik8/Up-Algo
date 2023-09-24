@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +8,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Editor</title>
+    <style>
+        /* Basic styling for the textarea */
+        .codeEditor {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            resize: vertical; /* Allow vertical resizing */
+            transition: border-color 0.3s; /* Smooth transition for border color */
+
+        }
+
+        /* Style when the textarea is focused */
+        
+        .codeEditor:hover {
+            border-color: #FFFFFF
+           border-color: #007bff;   /* Change border color on hover */
+            background-color: #f0f8ff; 
+            ; /* Change border color on hover */
+        }
+        /* Style for a character counter */
+        .char-counter {
+            font-size: 12px;
+            color: #888;
+            text-align: right;
+            margin-top: 5px;
+        }
+        
+        .box {
+            display: inline-block;
+            
+        }
+    </style>
 </head>
-<body style = "background-color:#24221e;color : #e8e6df;" height = "100%" >
+{% block content%}    
+
+    
+<body style = "background-color:#24221e;color : #e8e6df;">
     <div class="row">
         <div class="col-5" style="height: 100vh; border: 1px solid black; margin-left: 85px; overflow-y: auto;">
           <h1>{{ title }}</h1>
@@ -20,18 +59,43 @@
             resize: none; /* Remove this if you want the user to resize the textarea */
         } {% endcomment %}
         <textarea id="codeEditor" class="col-5" style="height: 100vh; border: 1px solid black; margin-left: 25px; overflow-y: auto; resize: none; background-color:#24221e; color:#e8e6df" name="code">{{ exist.code }}{{ starter }}</textarea>
+       
+        
+
       </div>
+      
       <br>
-      <button type="button" class="btn btn-success" id="submit-button" style="margin-left: 800px">Submit Code</button>
+      <div class="row">
+      <div class="col-6 " style="background-color: #24221e;
+      border-radius: 5px;
+      padding:10
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      ;">
+        <p style=" font-size: 20px;
+      color: #00000; margin-left: 15%;">
+      Timer:<span id="countdown" style="font-size: 20px; color: #007bff;"> 0</span> seconds</p>
+      </div>
+
+    <div class="col-5">
+      <button type="button" class="btn btn-success" id="submit-button" style="margin-left: 20px">Submit Code</button>
       <button type="button" class="btn btn-primary" id="check-button" style="margin-left: 25px">Check Code</button>
-      <br>
-      <br>
-    <div class="row" style="margin-left: 70px; border: 1px solid black; height: 100px; width: 1125px; overflow-y: auto;" id="output">
-        <h1>TestCase Output</h1>
+      <button type="button" class="btn btn-outline-warning shadow-sm bg-orange rounded" style="#ffc107; margin-left: 25px " id="startButton">Start Timer</button>
     </div>
-    <div class="row" style="margin-left: 70px; border: 1px solid black; height: 100px; width: 1125px; overflow-y: auto;" id="raw">
-        <h1>Raw Output</h1>
+</div>
+
+      <div class="row">
+       
+    <div class="col-5" style="margin-left: 70px; border: 1px solid black; height: 400px; width: 500px; overflow-y: auto;" id="output">
+        <h3>TestCase Output</h3>
     </div>
+    <br>
+      
+      
+    <div class="col-5" style="margin-left: 70px; border: 1px solid black; height: 400px; width: 500px; overflow-y: auto;" id="raw">
+        <h3>Raw Output</h3>
+    </div>
+</div>
+
     <script>
         $(document).ready(function() {
 
@@ -111,7 +175,57 @@
 
         });
 
+        const textarea = document.getElementById('codeEditor');
+        const charCounter = document.getElementById('charCounter');
 
+        textarea.addEventListener('input', function () {
+            const textLength = this.value.length;
+            charCounter.textContent = textLength + ' character' + (textLength === 1 ? '' : 's');
+        });
+         // Initialize variables
+         let countdownInterval;
+        let countdownMinutes = 5; // Initial countdown value in minutes
+        let countdownSeconds = 0; // Initial countdown seconds
+
+        // Function to start the countdown
+        function startCountdown() {
+            // Clear any previous countdown interval
+            clearInterval(countdownInterval);
+
+            // Update the countdown values
+            countdownMinutes = 1; // Set your desired countdown minutes here
+            countdownSeconds = 0;
+            document.getElementById('countdown').textContent = formatTime(countdownMinutes, countdownSeconds);
+
+            // Start the countdown
+            countdownInterval = setInterval(function () {
+                if (countdownMinutes > 0 || countdownSeconds > 0) {
+                    if (countdownSeconds === 0) {
+                        countdownMinutes--;
+                        countdownSeconds = 59;
+                    } else {
+                        countdownSeconds--;
+                    }
+                    document.getElementById('countdown').textContent = formatTime(countdownMinutes, countdownSeconds);
+                } else {
+                    clearInterval(countdownInterval); // Stop the countdown when it reaches 0:00
+                    alert('Countdown completed!');
+                }
+            }, 1000); // Update every 1 second (1000 milliseconds)
+        }
+
+        // Format time as "M:SS" or "0:00"
+        function formatTime(minutes, seconds) {
+            return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+        }
+
+        // Add a click event listener to the button
+        document.getElementById('startButton').addEventListener('click', startCountdown);
+    
+        // Add a click event listener to the button
+        document.getElementById('startButton').addEventListener('click', startTimer);
     </script>
+    
 </body>
+{% endblock %}
 </html>

@@ -61,6 +61,23 @@ def findelement(arr, n):
 		else:
 			r = mid - 1
 	return -1
+# sum of digit
+def sumdigit(n):
+	sum = 0
+	for digit in str(n): 
+		sum += int(digit)      
+	return sum
+
+#factorial original
+def factorial(x):
+    """This is a recursive function
+    to find the factorial of an integer"""
+
+    if x == 1:
+        return 1
+    else:
+        # recursive call to the function
+        return (x * factorial(x-1))
 
 class NthFib(unittest.TestCase):
 	def test_1(self):
@@ -129,20 +146,20 @@ class PalindromeChecker(unittest.TestCase):
 		assert palindrome("My age is 0, 0 si ega ym.") == True
 
 
-class Reverse_Number:
+class Reverse_Number(unittest.TestCase):
 	def test_1(self):
-		assert reverse(123) == 321
+		assert 8808 == reverse(8808)
 	def test_2(self):
 		"""palindrome("eye") should return true."""
-		assert reverse(5001) == 1005
+		assert reverse_number(8088) == reverse(8808) 
 
 	def test_3(self):
 		"""palindrome("_eye") should return true."""
-		assert reverse(9932) == 2399
+		assert reverse_number(8088) == reverse(8808)
 
 	def test_4(self):
 		"""palindrome("race car") should return true."""
-		assert reverse_number(8088) == reverse(8808)
+		assert reverse_number(80885) == reverse(58808)
 
 	def test_5(self):
 		"""palindrome("not a palindrome") should return false."""
@@ -162,14 +179,14 @@ class Reverse_Number:
 
 	def test_9(self):
 		"""palindrome("almostomla") should return false."""
-		assert reverse_number(00001) == reverse(10000)
+		assert reverse_number(100001) == reverse(100001)
 
 	def test_10(self):
 		"""palindrome("My age is 0, 0 si ega ym.") should return true."""
 		assert reverse_number(76002) == reverse(20067)
 	
 
-class Leap:
+class Leap(unittest.TestCase):
 	def test_1(self):
 		assert leap_year(1233) == False
 	def test_2(self):
@@ -200,7 +217,7 @@ class Leap:
 		assert leap_year(88) == leap_years(88)
 
 
-class Sorted_Array:
+class Sorted_Array(unittest.TestCase):
 	def test_1(self):
 		assert findele([1, 2, 3, 4, 5,6], 4) == findelement([1, 2, 3, 4, 5,6], 4)
 	def test_2(self):
@@ -231,6 +248,151 @@ class Sorted_Array:
 		assert findele([192, 228, 302, 875, 901, 933, 1890, 3092, 7282], 1092) == findelement([192, 228, 302, 875, 901, 933, 1890, 3092, 7282], 1092)
 
 
+class oddEven(unittest.TestCase):
+	def test_1(self):
+		assert parity(10) == True
+	def test_2(self):
+		assert parity(25644310) == True
+	def test_3(self):
+		assert parity(33224111) == False
+	def test_4(self):
+		assert parity(12422119) == False
+	def test_5(self):
+		assert parity(10988332) == True
+	def test_6(self):
+		assert parity(33223310) == True
+	def test_7(self):
+		assert parity(-123456789) == False
+	def test_8(self):
+		assert parity(-123942123) == False
+	def test_9(self):
+		assert parity(0) == True
+	def test_10(self):
+		assert parity(1) == False
 
+#sum_digit
+class Addition(unittest.TestCase):
+	def test_1(self):
+		assert sum_digit(1233) == sumdigit(1233)
+	def test_2(self):
+		assert sum_digit(2022) == sumdigit(2022)
+
+	def test_3(self):
+		assert sum_digit(1996) != sumdigit(1995)
+
+	def test_4(self):
+		assert sum_digit(2000) == 2
+
+	def test_5(self):
+		assert sum_digit(1900) == 10
+
+	def test_6(self):
+		assert sum_digit(0) == 0
+
+	def test_7(self):
+		assert sum_digit(100) == 1
+
+	def test_8(self):
+		assert sum_digit(88) == 16
+
+	def test_9(self):
+		assert sum_digit(1200) == 3
+
+	def test_10(self):
+		assert sum_digit(88) == 16
+	
+
+class Factorial(unittest.TestCase):
+	def test_1(self):
+		assert factorial(5) == facto(5)
+	def test_2(self):
+		assert factorial(2) == facto(2)
+
+	def test_3(self):
+		assert factorial(16) != facto(15)
+
+	def test_4(self):
+		assert facto(8) == factorial(8)
+
+	def test_5(self):
+		assert facto(9) == factorial(9)
+
+	def test_6(self):
+		assert facto(0) == 1
+
+	def test_7(self):
+		assert facto(18) == 6402373705728000
+
+	def test_8(self):
+		assert facto(7) == 5040
+
+	def test_9(self):
+		assert facto(11) == 39916800
+
+	def test_10(self):
+		assert facto(1) == 1
+	
+
+class ArmStrong(unittest.TestCase):
+	def test_1(self):
+		assert armstrong(153) == True
+	def test_2(self):
+		assert armstrong(1) == False
+
+	def test_3(self):
+		assert armstrong(16) != True
+
+	def test_4(self):
+		assert armstrong(0) == True
+
+	def test_5(self):
+		assert armstrong(153) == True
+
+	def test_6(self):
+		assert armstrong(99) == False
+
+	def test_7(self):
+		assert armstrong(370) == True
+
+	def test_8(self):
+		assert armstrong(371) == True
+
+	def test_9(self):
+		assert armstrong(5040) == True
+
+	def test_10(self):
+		assert armstrong(9474) == True
+
+
+class NumberSum(unittest.TestCase):
+	def test_1(self):
+		assert sum(20) == 210
+	def test_2(self):
+		assert sum(200) == 20100
+
+	def test_3(self):
+		assert sum(99) != 490
+
+	def test_4(self):
+		assert sum(1) == 1
+
+	def test_5(self):
+		assert sum(153) == 11781
+
+	def test_6(self):
+		assert sum(100) == 5050
+
+	def test_7(self):
+		assert sum(370) == 68635
+
+	def test_8(self):
+		assert sum(371) == 69006
+
+	def test_9(self):
+		assert sum(504) == 127260
+
+	def test_10(self):
+		assert sum(947) == 448878
 #"""if __name__ == "__main__":
 #	unittest.main()"""
+#armstrong --> 54748

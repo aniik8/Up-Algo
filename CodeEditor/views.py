@@ -76,21 +76,21 @@ def run_code(request):
     elif problem == 2:
         out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     elif problem == 3:
-        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+        out = Popen(["python3", "-m", "unittest", "-q", "test.Reverse_Number"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     elif problem == 4:
         out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     elif problem == 5:
         out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     elif problem == 6:
-        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+        out = Popen(["python3", "-m", "unittest", "-q", "test.oddEven"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     elif problem == 7:
-        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+        out = Popen(["python3", "-m", "unittest", "-q", "test.Addition"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     elif problem == 8:
-        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+        out = Popen(["python3", "-m", "unittest", "-q", "test.Factorial"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     elif problem == 9:
-        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+        out = Popen(["python3", "-m", "unittest", "-q", "test.ArmStrong"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     elif problem == 10:
-        out = Popen(["python3", "-m", "unittest", "-q", "test.PalindromeChecker"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
+        out = Popen(["python3", "-m", "unittest", "-q", "test.NumberSum"], stdout=subprocess.PIPE,  stderr=subprocess.STDOUT)
     stdout, stderr = out.communicate()
     data = str(stdout).split("======================================================================")
 
