@@ -1,7 +1,7 @@
-def nth_fib(n):
-	if n == 2:
-		return 1
-	elif n == 1:
-		return 0
-	else:
-		return nth_fib(n-1) + nth_fib(n-2)
+def reverse(n):
+	reversed_num = 0
+	while n != 0:
+		digit = n % 10
+		reversed_num = reversed_num * 10 + digit
+		n //= 10
+	return reversed_num
