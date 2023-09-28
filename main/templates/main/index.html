@@ -15,7 +15,10 @@
                     color: #ffffff;
                     
                 }
-        
+                a:hover {
+                    background: #FFDD00;
+                    color: #AAAAAA;
+                }
                 header {
                     background-color: #333;
                     color: #ffffff;
@@ -288,13 +291,14 @@
                 .then(problems => {
                     for (let i=0; i<problems.length; i++) {
                         var div = document.createElement('DIV');
+                        document.getElementById("title-text").innerHTML = "<underline>Questions</underline>"
                         if (problems[i]["complete"] === "True") {
-                            div.innerHTML = `<a href="/problems/${problems[i]["id"]}/"><h1>${problems[i]["title"]} (completed)</h1></a>`
+                            div.innerHTML = `<a href="/problems/${problems[i]["id"]}/"><h2>${problems[i]["title"]} (completed)</h2></a><hr>`
                         } else {
-                            div.innerHTML = `<a href="/problems/${problems[i]["id"]}/"><h1>${problems[i]["title"]}</h1></a>`
+                            div.innerHTML = `<a href="/problems/${problems[i]["id"]}/"><h2>${problems[i]["title"]}</h2></a><hr>`
                         }
                         if (problems[i]["paid"] == "true" && "{{ request.session.paid }}" == "false") {
-                            div.innerHTML = `<h1 style="color: gray">${problems[i]["title"]} (Premium question)</h1>`
+                            div.innerHTML = `<h2 style="color: gray">${problems[i]["title"]} (Premium question)</h2><hr>`
                         }
                         document.getElementById("main").appendChild(div);
                     }
@@ -304,7 +308,7 @@
         </script>
     </head>
     <body  style = "background-color:#24221e" height = "100%">
-        {%block content %}
+        
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <img rel="icon" style="width:3%; margin: 0 2% 0% 1%" src="https://cdn.iconscout.com/icon/free/png-256/free-leetcode-3628885-3030025.png" type="image/x-icon"/>
             <a style="color: gray" class="navbar-brand" href="#">UpAlgo - Your Sasta LeetCode </a>
@@ -335,20 +339,12 @@
        
         </nav>
         <div>
+        {%block content %}
         {% endblock %}
   
         
-            <h1  style="text-align: center; color: gray">This is a LeetCode Clone!</h1>
+            <h1 id="title-text" style="text-align: center; color: gray">This is a LeetCode Clone!</h1>
             <br>           
-            <ul style="margin-left: 40px; color: #d6d1c7">
-                {% comment %} <li><s>100</s> 10 of the <s>best</s> coding interview questions.</li>
-                <br/>
-                <li><s>Comprehensive video explanations.</s> (Well, use YouTube!), But for some question, I will add some video that is considerably good on explaining, but no promise!</li>
-                <li><s>A crash course on data structures.</s>. Well, guess what, we don't have a crash course on data structure.</li>
-                <li>Written code solutions in <s>9</s> 1 (You all better become data scientist so you can learn Python so you can use this platform) language<s>s</s>.</li>
-                <li>A <s>full-fledged</s> minimalistic coding workspace.</li>
-                <li><s>In-depth space-time complexity analyses.</s> Well, try to do analysis on your own because nobody going to help you during coding interview!</li> {% endcomment %}
-            </ul>
         </div>
     </div>
     </div>
