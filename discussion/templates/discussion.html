@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Page</title>
+    <style>
+        /* Add your CSS styles here for formatting */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Discussion styles */
+        .discussion {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .discussion-heading {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .discussion-likes {
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .discussion-username {
+            font-style: italic;
+            color: #888;
+        }
+
+        /* Button styles */
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Centering elements */
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Discussion Page</h1>
+
+    {% for discussion in content %}
+    <div class="discussion">
+        <div class="discussion-heading">{{ discussion.heading }}</div>
+        <div class="discussion-likes">Liked: {{ discussion.likes }}</div>
+        <div class="discussion-username">Posted by: {{ discussion.username }}</div>
+    </div>
+    {% empty %}
+    <p>No discussions available.</p>
+    {% endfor %}
+</body>
+</html>
