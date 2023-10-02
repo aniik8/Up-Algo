@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discussion Page</title>
     <style>
-        /* Add your CSS styles here for formatting */
+        /* General page styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -59,6 +59,29 @@
             cursor: pointer;
         }
 
+        /* Form styles */
+        .discussion-form {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
         /* Centering elements */
         .text-center {
             text-align: center;
@@ -66,16 +89,41 @@
     </style>
 </head>
 <body>
-    <h1>Discussion Page</h1>
+    <div class="container">
+        <h1 class="text-center">Discussion Page</h1>
 
-    {% for discussion in content %}
-    <div class="discussion">
-        <div class="discussion-heading">{{ discussion.heading }}</div>
-        <div class="discussion-likes">Liked: {{ discussion.likes }}</div>
-        <div class="discussion-username">Posted by: {{ discussion.username }}</div>
+        {% for discussion in discussions %}
+        <div class="discussion">
+            <div class="discussion-heading">{{ discussion.heading }}</div>
+            <div class="discussion-likes">Liked: {{ discussion.likes }}</div>
+            <div class="discussion-username">Posted by: {{ discussion.username }}</div>
+        </div>
+        {% empty %}
+        <p>No discussions available.</p>
+        {% endfor %}
+
+        <div class="text-center">
+            <button class="button">Add New Discussion</button>
+        </div>
+
+        <div class="discussion-form">
+            <h2>Create a New Discussion</h2>
+            <form method="POST" action="{% url 'create_discussion' %}">
+                {% csrf_token %}
+                <label for="discussion-heading" class="form-label">Discussion Heading:</label>
+                <input type="text" id="discussion-heading" name="heading" class="form-input" required>
+                
+                <label for="discussion-likes" class="form-label">Likes:</label>
+                <input type="number" id="discussion-likes" name="likes" class="form-input" required>
+                
+                <label for="discussion-username" class="form-label">Your Username:</label>
+                <input type="text" id="discussion-username" name="username" class="form-input" required>
+                
+                <div class="text-center">
+                    <button type="submit" class="button">Create Discussion</button>
+                </div>
+            </form>
+        </div>
     </div>
-    {% empty %}
-    <p>No discussions available.</p>
-    {% endfor %}
 </body>
 </html>
